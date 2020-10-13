@@ -1,14 +1,16 @@
 import React from 'react'
 import Sidebar from '../components/Sidebar'
+import Chat from '../components/Chat'
 
 const Imessage = () => {
     return (
-        <div>
-            <h2>Imessage part</h2>
+        <div className='flex'>
+            
             {/* Holds the two components */}
             {/* Sidebar */}
             <Sidebar />
             {/* Chat */}
+            <Chat />
         </div>
     )
 }
