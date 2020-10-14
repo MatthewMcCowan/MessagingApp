@@ -11,7 +11,7 @@ const SidebarChat = () => {
       <div className="sidebarchat_info relative w-full ml-2 md:visible invisible hover:text-white">
         <h3 className="text-2xl font-bold">Channel Name</h3>
         <p>last message sent ...</p>
-        <small className="absolute top-0 right-0">timestamp</small>
+        <small className="absolute top-0 right-0 xl:visible invisible">timestamp</small>
       </div>
     </div>
   );
