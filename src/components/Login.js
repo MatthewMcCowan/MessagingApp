@@ -17,6 +17,7 @@ const Login = () => {
         />
         <h2 className='text-5xl font-bold text-gray-700 mb-40'>Star Message</h2>
         <button onClick={singIn} className='border-2 border-gray-700 tracking-wider shadow-xl py-2 px-8 rounded-lg bg-blue-300 uppercase text-2xl hover:text-white hover:bg-blue-600 hover:border-gray-800 hover:shadow-none'>Sign In</button>
+        
       </div>
     </div>
   );

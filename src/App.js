@@ -12,7 +12,6 @@ import { auth } from "./firebase/firebase";
 library.add(fab, fas, far);
 
 function App() {
-  
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
@@ -32,6 +31,7 @@ function App() {
       }
     });
   }, []);
+
   return (
     <div className="App">
       {/* Create a single component that holds everything */}

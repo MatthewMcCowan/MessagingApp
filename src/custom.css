@@ -1,8 +1,9 @@
 .sidebar__chats::-webkit-scrollbar {
-    display:none;
+  display: none;
 }
 
 .sidebar__chats {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+

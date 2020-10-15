@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {useSelector} from 'react-redux';
+import {selectUser} from '../features/userSlice'
 
 const Chat = () => {
   const [input, setInput] = useState("");
+  const user = useSelector(selectUser);
 
   const sendMessage = (e) => {
     e.preventDefault();
@@ -25,6 +28,9 @@ const Chat = () => {
          <h2>I am a message</h2>
          <h2>I am a message</h2>
          <h2>I am a message</h2>
+         <div>
+        <img className="h-20 w-20" src={user.photo}/>
+        </div>
       </div>
       {/* input */}
       <div className="chat__input border">
