@@ -31,17 +31,18 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen border p-4 w-3/12">
-      <div className="flex h-20  w-full items-center border-b-2 ">
+    <div className="flex flex-col h-screen border w-3/12 bg-blue-100">
+      <div className="flex h-24  w-full items-center border-b-2 px-4 ">
         <img
           src={user.photo}
+          alt=''
           className=" rounded-full cursor-pointer h-16 w-16 avatar"
           onClick={() => auth.signOut()}
         />
         <div className="sidebarSearchinput flex content-center p-2 rounded-lg bg-gray-300 ml-4 ">
           <FontAwesomeIcon
             icon="satellite"
-            className="inline-block text-3xl text-gray-600"
+            className="inline-block text-4xl pr-2 text-gray-600 border-r-4 border-dotted border-gray-700"
           />
           <input
             placeholder="Search"

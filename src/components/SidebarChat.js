@@ -1,9 +1,19 @@
 import React from "react";
+import {useDispatch} from 'react-redux'
+import {setChat} from '../features/chatSlice'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SidebarChat = ({id, chatName}) => {
+  const dispatch = useDispatch()
   return (
-    <div className="flex border-b-2 p-2 h-32 items-center hover:bg-gray-200 rounded-lg hover:bg-blue-400 cursor-pointer">
+    <div onClick={()=> {
+      dispatch(
+        setChat({
+          chatId: id,
+          chatName: chatName,
+        })
+      )
+    }} className="flex border-b-2 p-2 h-32 items-center hover:bg-gray-200 rounded-lg hover:bg-blue-400 cursor-pointer">
       <FontAwesomeIcon
         icon="user-astronaut"
         className="bg-blue-200 text-blue-400 text-6xl rounded-full p-2"
