@@ -22,7 +22,7 @@ const Sidebar = () => {
   }, []);
 
   const addChat = () => {
-    const chatName = prompt("Please enter a chat name!");
+    const chatName = prompt("Please Create a Chat Room!");
     if (chatName) {
       db.collection("chats").add({
         chatName: chatName,
@@ -31,12 +31,12 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen border w-3/12 bg-blue-100">
-      <div className="flex h-24  w-full items-center border-b-2 px-4 ">
+    <div className="flex flex-col md:h-screen border md:flex-initial bg-gray-300 relative">
+      <div className="flex h-32  w-full items-center border-b-2 px-4 bg-blue-100 relative">
         <img
           src={user.photo}
           alt=''
-          className=" rounded-full cursor-pointer h-16 w-16 avatar"
+          className=" rounded-lg cursor-pointer h-16 w-16 avatar"
           onClick={() => auth.signOut()}
         />
         <div className="sidebarSearchinput flex content-center p-2 rounded-lg bg-gray-300 ml-4 ">
@@ -55,12 +55,16 @@ const Sidebar = () => {
           className="text-3xl text-gray-600 ml-4 cursor-pointer"
           onClick={addChat}
         />
+         <small className='absolute bottom-0 left-0 text-xs opacity-50'>Logout = Click Logo</small>
       </div>
-      <section className="mt-6 overflow-auto sidebar__chats">
+      {/* Chat room Header */}
+      
+      <section className=" overflow-auto sidebar__chats">
         {chats.map(({ id, data: { chatName } }) => (
           <SidebarChat key={id} id={id} chatName={chatName} />
         ))}
       </section>
+     
       {/* <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg> */}
     </div>
   );

@@ -6,7 +6,7 @@ import Chat from '../components/Chat'
 const Imessage = () => {
     
     return (
-        <div className='flex'>
+        <div className='sm:flex sm:flex-col md:flex-row '>
             
             {/* Holds the two components */}
             {/* Sidebar */}
